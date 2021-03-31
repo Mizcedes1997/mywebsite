@@ -24,6 +24,8 @@ p{
 
 header{
     background-color:#6f8a77;
+    position:sticky;
+    top: 0;
 }
 
 h1{}
@@ -33,7 +35,11 @@ h2{}
 h3{}
 
 nav{
+    /* background: ; */
     display: inline-block;
+    /* width:; */
+
+
 }
     nav ul{
         display: inline-block;
