@@ -1,7 +1,8 @@
-/* Meyer Reset*/
+/* MEYER RESET*/
 @import 'reset.css';
 
-/* @import PUT FONT IMPORT HERE */
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@400;500;700&display=swap'); 
 
 /* CONTENT LIST
    1 Elements
@@ -12,32 +13,64 @@
 /* 1 Elements ========================*/
 
 body{
-    background-color:#ffffff;
+    font-family: 'Lato', sans-serif; 
+    font-size: 18px;
+}   
+
+h1, h2, h3{
+    font-family: 'Oswald', sans-serif; 
+    margin: 10px 0 20px 0; 
+}
+h1{    
+    font-size:32px; 
+    font-weight:700;
+    line-height:37px;
+    color:;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 30px 50px;    
 }
 
-a{}
+h2{
+    font-size:24px; 
+    font-weight:500;
+    line-height:;
+    color:;
+    text-transform: capitalize;
+}
 
-p{}
+h3{
+    font-size:22px; 
+    font-weight:400;
+    line-height:;
+    color:;
+    text-transform:none;
+}
+
+p{
+    font-size:18px; 
+    line-height:23px; 
+    margin-bottom: 20px; 
+}
 
 header{
-    background-color:#6f8a77;
+    background-color:#536d5b;
     position:sticky;
     top: 0;
     width: 100%;
-}
+} 
 
-h1{
-    background-color: coral;
-    display: inline-block;
-    padding: 30px 50px; 
-}
-
-h2{}
-
-h3{}
-
-nav{    
+nav{
+    font-size:24px; 
+    font-weight:500;
+    line-height:;
+    color:;
+    text-transform: capitalize;    
     float: right; 
+}
+
+nav ul{
+
 }
 
 nav ul li{
@@ -60,8 +93,8 @@ main{
 }
 
 footer{
-    background-color:#6f8a77;
-    color: white;
+    background-color:#6faa77;
+    color: black;
     padding: 20px;
     /* width: 100%;  */
     /* font-family: 'Akkurat-Mono'; */
