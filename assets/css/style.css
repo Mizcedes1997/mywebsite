@@ -11,126 +11,210 @@
 */
 
 /* 1 Elements ========================*/
+html{
+    --dark-blue: #080f26; 
+    --blue:#8398af;
+    --light-blue:#edf0f4;
+    --dark-grey:#696969;
+}
 
 body{
     font-family: 'Lato', sans-serif; 
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color:var(--light-blue);
+    color: var(--dark-grey);
 }   
 
 h1, h2, h3{
     font-family: 'Oswald', sans-serif; 
-    margin: 10px 0 20px 0; 
+    margin: 20px 0 20px 0; 
 }
+
 h1{    
-    font-size:32px; 
+    font-size:36px; 
     font-weight:700;
-    line-height:37px;
-    color:;
+    letter-spacing:2px; 
     text-transform: uppercase;
     display: inline-block;
-    padding: 30px 50px;    
+    padding: 5px 50px; 
+    color: var(--dark-blue);  
 }
 
 h2{
-    font-size:24px; 
+    font-size:22px; 
     font-weight:500;
-    line-height:;
-    color:;
+    line-height:27px;
     text-transform: capitalize;
 }
 
 h3{
     font-size:22px; 
     font-weight:400;
-    line-height:;
-    color:;
     text-transform:none;
 }
 
 p{
     font-size:18px; 
-    line-height:23px; 
     margin-bottom: 20px; 
 }
 
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+    a:hover{
+        background-color:var(--light-blue);
+    }
+
+    a:visited{
+        text-decoration: none;
+    }
+
 header{
-    background-color:#536d5b;
+    background-color: var(--blue);
     position:sticky;
     top: 0;
     width: 100%;
 } 
 
 nav{
+    font-family: 'Oswald', sans-serif; 
     font-size:24px; 
     font-weight:500;
-    line-height:;
-    color:;
+    letter-spacing:1px;
+    color: var(--dark-blue);
     text-transform: capitalize;    
     float: right; 
 }
 
-nav ul{
+    nav ul{
 
-}
-
-nav ul li{
-    display: inline-block;
     }
 
-nav ul li a{
+        nav ul li{
+            display: inline-block;
+            padding: 30px 10px 0px 10px;
+            margin-right: 20px;
+            }
 
-}
+            nav ul li a{
+            
+            }
 
-nav ul li a.currentpage{
-    background-color:blueviolet;
-    text-decoration: none;
-}
+                nav ul li a.currentpage{
+                    background-color:#edf0f4;
+                    text-decoration: none;
+                }
 
 main{
-    background-color:aqua;
+    background-color:#fafafa;
     width: 980px;
-    margin: 0 auto; 
+    margin: 50px auto; 
+    padding: 20px 20px;
+    border-radius: 25px;
 }
 
+    main ul li{
+        font-size:18px;
+    }
+
 footer{
-    background-color:#6faa77;
-    color: black;
-    padding: 20px;
-    /* width: 100%;  */
-    /* font-family: 'Akkurat-Mono'; */
-    font-size: 16px;
+    font-family: 'Oswald', sans-serif; 
+    font-size: 18px;
     text-align: center;
-  }
+    background-color: var(--blue);
+    color:var(--dark-blue);
+    padding: 20px 0px; 
+    }
+
+    footer p{
+    margin-bottom: 0px;
+}
 
  img{
      max-width: 100%;
+     border-radius: 20px;
  }
 
 /* 2 Classes and IDs ========================*/
 
-/* .full-width-wrapper{
+.full-width-wrapper{
     width:100%;
-    }
+}
 
 .wrapper {
-    width: 960px;
+    width: 980px;
     margin: 0 auto;
-} */
+}
 
 .grid-2-col{
     display: grid;
     grid-template-columns: 1fr 1fr
 }
 
+    #grid-image-2{
+        float: right;
+        width:30%;
+        height:
+    }
+
+    #grid-text-2{
+        float: left;
+        display: inline;
+    }
+
+/* .row-hero{
+    margin: ;
+    width: 80%;
+    height: 20rem;
+    overflow: hidden;
+    position:; 
+    z-index: -5;
+} */
+
+/* .flex-gallery{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+    .flex-gallery> li{
+        width: 25%;
+        flex-grow: 1;
+}
+
+    .flex-gallery img{
+        max-height: 100%;
+        min-width: 100%;
+        object-fit: cover;
+    }
+     */
 /* 3 Media Queries ==========================*/
 @media screen and (max-device-width: 900px) { 
     .grid-2-col{ 
         grid-template-columns: 1fr 1fr;
     } 
+    .flex-gallery>li{
+        width:100%;
+    }
 }
 
 @media screen and (max-device-width: 600px) { 
     .grid-2-col{ 
         grid-template-columns: 1fr;
     } 
+    .flex-gallery>li{
+        width:100%;
+    }
+}
+
+@media screen and (max-device-width: 320px) { 
+    .grid-2-col{ 
+        grid-template-columns: 1fr;
+    } 
+    .flex-gallery>li{
+        width:100%;
+    }
 }
