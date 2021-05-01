@@ -11,20 +11,22 @@
 */
 
 /* 1 Elements ========================*/
-html{
-    --dark-blue: #080f26; 
-    --blue:#8398af;
-    --light-blue:#edf0f4;
-    --dark-grey:#696969;
-    --titan-white:#fafafa;
+:root{
+    --header-bg-color:#8398af;
+    --body-bg-color:#c1cbd7; 
+    --main-bg-color:#fafafa;
+    --heading-color: #080f26; 
+    --main-text-color:#696969;
+    /* Custom properties were used to define the colours that were reused throughout the document. I only had to adjust the custom property, rather than having to search and replace each color individually throughout the document. The custom properties were defined in the :root psuedo class selector rather than the <html> element because its specificity is higher.*/
 }
 
 body{
     font-family: 'Lato', sans-serif; 
     font-size: 16px;
     line-height: 1.5;
-    background-color:var(--light-blue);
-    color: var(--dark-grey);
+    background-color: var(--body-bg-color);
+    color: var(--main-text-color);
+    /* The line-height property is set as a unitless value, 1.5, in the <body> element to prevent unexpected results due to inheritance. The unitless value is multiplied by each element's own font size. It also ensures that the line height will scale proportionately, if a user zooms in on a page to increase the text size. */
 }   
 
 h1, h2, h3{
@@ -33,61 +35,66 @@ h1, h2, h3{
 }
 
 h1{    
-    font-size:36px; 
-    font-weight:700;
-    letter-spacing:2px; 
+    font-size: 36px; 
+    font-weight: 700;
+    letter-spacing: 2px; 
     text-transform: uppercase;
     display: inline-block;
     padding: 5px 50px; 
-    color: var(--dark-blue);  
+    color: var(--heading-color);  
 }
 
 h2{
-    font-size:22px; 
-    font-weight:500;
-    line-height:27px;
+    font-size: 22px; 
+    font-weight: 500;
+    line-height: 27px;
     text-transform: capitalize;
     text-align: center;
 }
 
 h3{
-    font-size:22px; 
-    font-weight:400;
-    text-transform:none;
+    font-size: 22px; 
+    font-weight: 400;
+    text-transform: none;
 }
 
 p{
-    font-size:18px; 
+    font-size: 18px; 
     margin-bottom: 20px; 
 }
 
-
+/* Links */
 a{
     color: inherit;
     text-decoration: none;
 }
 
+/* Mouse over link */
 a:hover{
-    background-color:var(--light-blue);
+    background-color: var(--body-bg-color);
+    /*When a user hovers over a link, the cursor will turn into a pointer and the background colour of the link will change, providing the user with visual feedback. The visual feedback indicates to the user that the link can be cllicked on.*/
 }
 
+/* Visited link */
 a:visited{
     text-decoration: none;
 }
 
 header{
-    background-color: var(--blue);
-    position:sticky;
+    background-color: var(--header-bg-color);
+    position: sticky;
     top: 0;
     width: 100%;
+    box-shadow: 4px 0 3px 3px;
+    /* The position property is used to create a sticky header. The box-shadow property is used to cast a drop shadow on the <header> element, to create greater contrast between the sticky <header> element and the <main> element.*/
 } 
 
 nav{
     font-family: 'Oswald', sans-serif; 
-    font-size:24px; 
-    font-weight:500;
-    letter-spacing:1px;
-    color: var(--dark-blue);
+    font-size: 24px; 
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--heading-color);
     text-transform: capitalize;    
 }
 
@@ -105,19 +112,21 @@ nav ul li a{
             
 }
 
+/* Current Page*/
 nav ul li a.currentpage{
-    background-color:#edf0f4;
+    background-color: var(--body-bg-color);
     text-decoration: none;
+    /*The link corresponding with the current page that the user is viewing ......*/
 }
 
 main{
-    background-color:#fafafa;
+    background-color: var(--main-bg-color);
     /* max-width: 980px; */
     margin: 50px auto; 
     padding: 20px 20px;
-    border-radius: 25px;
     overflow: auto;
-    
+    border-radius: 25px;
+    /* The border-radius property is used to give the <main> element and <img> elements rounded borders.*/
 }
 
 main ul li{
@@ -128,8 +137,8 @@ footer{
     font-family: 'Oswald', sans-serif; 
     font-size: 18px;
     text-align: center;
-    background-color: var(--blue);
-    color:var(--dark-blue);
+    background-color: var(--header-bg-color);
+    color:var(--heading-color);
     padding: 20px 0px; 
     }
 
@@ -140,6 +149,9 @@ footer{
  img{
     max-width: 100%;
     border-radius: 20px;
+    border: solid;
+    border-width:3px;
+    border-color: var(--main-text-color);
  }
 
 /* 2 Classes and IDs ========================*/
@@ -186,7 +198,6 @@ footer{
     margin: 30px 120px;
     width: 75%;
     max-height: 30rem;
-    border-radius: 20px;
     overflow: hidden;
 }
 
