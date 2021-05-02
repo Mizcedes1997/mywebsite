@@ -7,7 +7,8 @@
 /* CONTENT LIST
    1 Elements
    2 Classes and IDs
-   3 Media Queries
+   3 Hamburger Icon
+   4 Media Queries
 */
 
 /* 1 Elements ========================*/
@@ -20,47 +21,46 @@
     /* Custom properties were used to define the colours that were reused throughout the document. I only had to adjust the custom property, rather than having to search and replace each color individually throughout the document. The custom properties were defined in the :root psuedo class selector rather than the <html> element because its specificity is higher.*/
 }
 
+html{
+    font-size: 62.5%;
+}
+
 body{
     font-family: 'Lato', sans-serif; 
     font-size: 16px;
     line-height: 1.5;
     background-color: var(--body-bg-color);
     color: var(--main-text-color);
-    /* The line-height property is set as a unitless value, 1.5, in the <body> element to prevent unexpected results due to inheritance. The unitless value is multiplied by each element's own font size. It also ensures that the line height will scale proportionately, if a user zooms in on a page to increase the text size. */
+    /* The line-height property is set as a unitless value, 1.5, in the <body> element to prevent unexpected results due to inheritance. The unitless value is multiplied by each element's own font size. It also ensures that the line height will scale proportionately, if a user zooms in on a page to increase the text size.*/
 }   
 
 h1, h2, h3{
     font-family: 'Oswald', sans-serif; 
-    margin: 20px 0 20px 0; 
+    margin: 2rem 0 2rem 0; 
 }
 
 h1{    
-    font-size: 36px; 
+    font-size: 3.6rem; 
     font-weight: 700;
-    letter-spacing: 2px; 
+    letter-spacing: 0.2rem; 
     text-transform: uppercase;
     display: inline-block;
-    padding: 5px 50px; 
+    padding: 0.5rem 5rem; 
     color: var(--heading-color);  
 }
 
 h2{
-    font-size: 22px; 
+    font-size: 2.2rem; 
     font-weight: 500;
-    line-height: 27px;
-    text-transform: capitalize;
+    text-transform: none;
     text-align: center;
 }
 
 h3{
-    font-size: 22px; 
+    font-size: 2.2rem; 
     font-weight: 400;
     text-transform: none;
-}
-
-p{
-    font-size: 18px; 
-    margin-bottom: 20px; 
+    margin: 0 11rem 2rem 11rem;
 }
 
 /* Links */
@@ -69,77 +69,84 @@ a{
     text-decoration: none;
 }
 
-/* Mouse over link */
-a:hover{
-    background-color: var(--body-bg-color);
-    /*When a user hovers over a link, the cursor will turn into a pointer and the background colour of the link will change, providing the user with visual feedback. The visual feedback indicates to the user that the link can be cllicked on.*/
-}
+    /* Mouse over link */
+    a:hover{
+        background-color: var(--body-bg-color);
+        /*When a user hovers over a link, the cursor will turn into a pointer and the background colour of the link will change, providing the user with visual feedback. The visual feedback indicates to the user that the link can be cllicked on.*/
+    }
 
-/* Visited link */
-a:visited{
-    text-decoration: none;
-}
+    /* Visited link */
+    a:visited{
+        text-decoration: none;
+    }
 
 header{
     background-color: var(--header-bg-color);
     position: sticky;
     top: 0;
     width: 100%;
-    box-shadow: 4px 0 3px 3px;
+    box-shadow: 0.4rem 0 0.3rem 0.3rem;
     /* The position property is used to create a sticky header. The box-shadow property is used to cast a drop shadow on the <header> element, to create greater contrast between the sticky <header> element and the <main> element.*/
 } 
 
 nav{
     font-family: 'Oswald', sans-serif; 
-    font-size: 24px; 
+    font-size: 2.4rem; 
     font-weight: 500;
-    letter-spacing: 1px;
+    letter-spacing: 0.1rem;
     color: var(--heading-color);
     text-transform: capitalize;    
 }
 
-nav ul{
+    nav ul{
+        padding: 4rem 3rem 0 3rem;
+    }
 
-}
+    nav ul li{
+        display: inline-block;
+        margin-right: 2rem;
+    }
 
-nav ul li{
-    display: inline-block;
-    padding: 30px 10px 0px 10px;
-    margin-right: 20px;
-}
-
-nav ul li a{
-            
-}
-
-/* Current Page*/
-nav ul li a.currentpage{
-    background-color: var(--body-bg-color);
-    text-decoration: none;
-    /*The link corresponding with the current page that the user is viewing ......*/
-}
+    /* Current Page*/
+    nav ul li a.currentpage{
+        background-color: var(--body-bg-color);
+        text-decoration: none;
+        /*The link corresponding with the current page that the user is viewing will have a different background colour, compared to the <header> element. The use of a different background colour provides feedback to the user, highlighting the user's current position on my website*/
+    }
 
 main{
     background-color: var(--main-bg-color);
-    /* max-width: 980px; */
-    margin: 50px auto; 
-    padding: 20px 20px;
+    max-width: 960px;
+    margin: 5rem auto; 
+    padding: 2rem 2rem;
     overflow: auto;
-    border-radius: 25px;
+    border-radius: 2.5rem;
     /* The border-radius property is used to give the <main> element and <img> elements rounded borders.*/
 }
 
-main ul li{
-    font-size:18px;
+p{
+    font-size: 1.8rem; 
+    margin: 0 11rem 2rem 11rem;
 }
+
+    p ~ ul{
+        margin: 0 11rem 2rem 11rem
+        /* The selector, p ~ ul, is used because it selects every <ul> element that is preceded by a <p> element. Using this selector, rather than ul li, allows me to style the <ul> elements in <p> elements differently from the nav ul.*/
+    }
+
+    p ~ ul li{
+        font-size:1.8rem;
+        list-style-type:disc;
+        list-style-position: inside;
+    }
 
 footer{
     font-family: 'Oswald', sans-serif; 
-    font-size: 18px;
+    font-size: 1.8rem;
     text-align: center;
     background-color: var(--header-bg-color);
     color:var(--heading-color);
-    padding: 20px 0px; 
+    padding: 2rem 0px; 
     }
 
     footer p{
@@ -148,9 +155,9 @@ footer{
 
  img{
     max-width: 100%;
-    border-radius: 20px;
+    border-radius: 2rem;
     border: solid;
-    border-width:3px;
+    border-width:0.3rem;
     border-color: var(--main-text-color);
  }
 
@@ -161,7 +168,7 @@ footer{
 }
 
 .wrapper {
-    max-width: 980px;
+    /* max-width: 960px; */
     margin: 0 auto;
 }
 
@@ -184,7 +191,7 @@ footer{
 .right-img,
 .left-img{
     max-width:40%;
-    margin: 20px;
+    margin: 2rem;
 }
 
 .right-text,
@@ -192,16 +199,17 @@ footer{
 {
     max-width: 50%;
     align-self:center;
+    margin: 0 0;
 } 
 
 .centre{
-    margin: 30px 120px;
+    margin: 3rem 12rem;
     width: 75%;
-    max-height: 30rem;
+    max-height: 45rem;
     overflow: hidden;
 }
 
-/* .flex-gallery{
+.flex-gallery{
     display:flex;
     flex-wrap:wrap;
 }
@@ -209,15 +217,73 @@ footer{
     .flex-gallery> li{
         width: 25%;
         flex-grow: 1;
-}
+    }
 
     .flex-gallery img{
         max-height: 100%;
         min-width: 100%;
         object-fit: cover;
     }
-     */
-/* 3 Media Queries ==========================*/
+    
+
+/* 3 Hamburger Icon ==========================*/
+    /* Hamburger Menu - https://code-boxx.com/simple-responsive-pure-css-hamburger-menu/ */
+
+/* [ON BIG SCREEN] */
+/* Wrapper */
+#hamnav {
+    background: var(--header-bg-color);
+  }
+  
+  /* Hide Hamburger */
+  #hamnav label, #hamburger { display: none; }
+  
+  /* Horizontal Menu Items */
+  #hamitems { display: flex; }
+  #hamitems a {
+    width: 20%; /* 100% / 5 tabs = 20% */
+    padding: 10px;
+    color: var(--heading-color);
+    text-decoration: none;
+    text-align: center;
+  }
+  #hamitems a:hover {
+    background-color: var(--body-bg-color);
+  }
+  
+  /* [ON SMALL SCREENS] */
+  @media screen and (max-width: 850px){
+    /* Show Hamburger Icon */
+    #hamnav label { 
+      display: inline-block; 
+      color: white;
+      background: #a02620;
+      font-style: normal;
+      font-size: 1.2em;
+      padding: 10px;
+    }
+  
+    /* Break down menu items into vertical */
+    #hamitems a {
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      border-top: 1px solid #333;
+    }
+  
+    /* Toggle Show/Hide Menu */
+    #hamitems { display: none; }
+    #hamnav input:checked ~ #hamitems { display: block; }
+  }
+  
+  /* [DOES NOT MATTER] */
+  html, body {
+    padding: 0;
+    margin: 0;
+    font-family: arial, sans-serif;
+  }
+
+/* 4 Media Queries ==========================*/
 @media screen and (max-device-width: 900px) { 
     .grid-2-col{ 
         grid-template-columns: 1fr 1fr;
@@ -245,4 +311,6 @@ footer{
     }
 }
 
-@media screen and (max-device-width: 200px){}
+@media screen and (max-device-width: 200px){
+
+}

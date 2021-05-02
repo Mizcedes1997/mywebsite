@@ -5,57 +5,60 @@
         <title>Churchill House</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="assets/css/style.css" rel="stylesheet">
+        <link href="assets/css/style.css" rel="stylesheet"><!-- Code to link page to stylesheet (CSS file) -->
     </head>
 
     <body>
         <header>
-            <div class="full-width-wrapper">
-                <div class="flex-header">
-                    <h1><a href="index.html">Churchill House</a></h1>
-                    
-                    <nav>
-                        <ul>
-                            <li><a href="index.html" class="currentpage">Home</a></li>
-                            <li><a href="thehistory.html">History</a></li>
-                            <li><a href="thearchitect.html">Architect</a></li>
-                            <li><a href="theplace.html">Place</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>  
-        </header>
+                <div class="full-width-wrapper">
+                    <div class="flex-header">
+                        <h1><a href="index.html">Churchill House</a></h1>
+                        
+                        <!-- Hamburger Menu - https://code-boxx.com/simple-responsive-pure-css-hamburger-menu/ -->
+                            <nav id="hamnav">
+                                <!-- [The Hamburger Icon] -->
+                                <label for="hamburger">&#9776;</label>
+                                <input type="checkbox" id="hamburger"/>
 
-         <div class="wrapper">
-             <main>
+                                <!-- [Menu Items] -->
+                                <ul id="hamitems">
+                                    <li><a href="index.html" class="currentpage">Home</a></li>
+                                    <li><a href="thehistory.html">History</a></li>
+                                    <li><a href="thearchitect.html">Architect</a></li>
+                                    <li><a href="theplace.html">Place</a></li>
+                                </ul>
+                            </nav>
+                    </div> 
+                </div>
+        </header>
+ 
+        <main>
+            <div class="wrapper">
                 <div class="flex-index">
 
                     <img title="Boyd's Concept Sketch" alt="Boyd's concept sketch for the C-shape scheme c.1968 showing the general form of the design was well established." src="assets/images/churchill-house-4.jpg" class="centre">
-                    
+                        
                     <h2>Churchill House: A Brief Introduction</h2>
-                        
+                            
                     <p class="left-text">Churchill House, at 216 Northbourne Avenue in Braddon, was designed by Robin Boyd for the Winston Churchill Memorial Trust of Australia in 1969-70, and construction was completed in 1971. It was Boyd’s last major commission, and he died prior to its completion. It is one of a small number of larger designs produced by Boyd and was Canberra’s first brutalist building.</p>
-
+    
                     <img title="Churchill House Exterior (photo by Ben Ennis Butler)" alt="Displays Churchill House exterior, including structural fins and native trees and shrubs." src="assets/images/churchill-house-34.jpg" class="right-img">
-                
+                    
                     <img title="North Wing (ACT Heritage,2013)" alt="Open Systems House (former Churchill House) north wing." src="assets/images/churchill-house-13.jpg" class="left-img"> 
-                        
+                            
                     <p class="right-text">Several components make up the complex. The main building, with east and south wings; the separate north wing or pavilion; the central pool and a rear carpark. The main building forms an L shape, and with the north wing it encloses a courtyard with a large ornamental pool. The main building is three storeys high with a four-storey lift tower at the southeast corner. The north wing and the carpark are two storeyed.</p>
-            
+                
                     <p class="left-text">Although it has undergone some alterations over the years, the building still displays key features of the brutalist style with its large areas of blank wall and use off-form concrete, sloping structural fins and precast concrete non-loadbearing wall panels, precast fins for sun protection, and vertical slit windows. Churchill House displays a fairly restrained form in comparison with the major Canberra buildings that followed in this style: the Cameron Offices, the National Gallery of Australia, and the High Court of Australia.</p>
-
+    
                     <img title="Churchill House Exterior (photo by Ben Ennis Butler)" alt="Displays sloping structural fins." src="assets/images/churchill-house-36.jpg" class="right-img">      
                 </div> 
-            </main>
-        </div>
+            </div>
+        </main>
         
-         
-        <footer> 
+        <footer>
             <div class="full-width-wrapper">
                 <p>This website was produced by students in the Faculty of Arts &amp; Design, University of Canberra, 2021</p>
             </div>
         </footer>
-  
     </body>
-
 </html>

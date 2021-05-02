@@ -5,7 +5,7 @@
         <title>Churchill House</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="assets/css/style.css" rel="stylesheet">
+        <link href="assets/css/style.css" rel="stylesheet"><!-- Code to link page to stylesheet (CSS file) -->
     </head>
 
     <body>
@@ -14,26 +14,32 @@
                 <div class="flex-header">
                     <h1><a href="index.html">Churchill House</a></h1>
 
-                    <nav>
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="thehistory.html" class="currentpage">History</a></li>
-                            <li><a href="thearchitect.html">Architect</a></li>
-                            <li><a href="theplace.html">Place</a></li>
-                        </ul>
-                    </nav>
+                    <!-- Hamburger Menu - https://code-boxx.com/simple-responsive-pure-css-hamburger-menu/ -->
+                        <nav id="hamnav">
+                            <!-- [The Hamburger Icon] -->
+                            <label for="hamburger">&#9776;</label>
+                            <input type="checkbox" id="hamburger"/>
+
+                            <!-- [Menu Items] -->
+                            <ul id="hamitems">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="thehistory.html" class="currentpage">History</a></li>
+                                <li><a href="thearchitect.html">Architect</a></li>
+                                <li><a href="theplace.html">Place</a></li>
+                            </ul>
+                        </nav>
                 </div>
             </div>
         </header>
         
-        <div class="wrapper">
-            <main>
+        <main>
+            <div class="wrapper">
            
                 <img title="Boyd's First Floor Plan for Churchill House (courtesy of Ann Cleary)" alt="Boyd’s original drawings of Churchill House – first floor plan." src="assets/images/churchill-house-19.jpg" class="centre">
             
-                <h2>The History</h2>
+                <h2>History of Churchill House</h2>
                 <section>
-                    <h3>Purpose of Churchill House</h3>
+                    <h3>Purpose</h3>
 
                     <p>Churchill House was built by the Winston Churchill Memorial Trust of Australia. The Trust began consideration of erecting a building of its own in 1967 and formed a building committee in 1968. In 1969 it acquired a lease for land on Northbourne Avenue, the current site, and engaged the architect Robin Boyd to design the building.</p>
 
@@ -52,10 +58,8 @@
 
                 <img title="Boyd's Second Floor Plan for Churchill House (courtesy of Ann Cleary)" alt="Boyd’s original drawings of Churchill House – second floor plan." src="assets/images/churchill-house-20.jpg" class="centre">
                 
-
-
                 <section>
-                    <h3>Architect of Churchill House</h3>
+                    <h3>Architect</h3>
 
                     <p>Robin Boyd CBE HFRAIA (1919-1971) is a noted Australian architect. Boyd was a member of a prominent artistic family, and combined a career as an architect, author and critic (Clerehan, 1993). He was strongly influenced by the Modern Movement, and deeply interested in the development of Australian architecture. Boyd is often remembered best for his domestic architecture, as well as his books, but he also produced designs for larger scale works, such as in the case of Churchill House. Boyd was awarded the Gold Medal by the RAIA in 1969, and made an honorary fellow in 1970.</p>
 
@@ -63,7 +67,7 @@
                 </section>
 
                 <section>
-                    <h3>Architectural Style of Churchill House</h3>
+                    <h3>Architectural Style</h3>
                     <p>Churchill House is one of a number of Canberra buildings designed in the Late Twentieth Century Brutalist style. These include:</p>
                     <ul>
                         <li>National Gallery of Australia, 1971;</li>
@@ -74,15 +78,13 @@
 
                     <p>Churchill House is an early example in this context, and one of only two examples of an office building. While Brutalism has been described as an ethic rather than an aesthetic (Banham, 1966:10), both office buildings display a more restrained form compared to the other buildings, several of which were intended to portray a distinctive image in the national capital.</p>
                 </section>
-            </main>
-        </div>
+            </div>
+        </main>
 
         <footer>
             <div class="full-width-wrapper">
                 <p>This website was produced by students in the Faculty of Arts &amp; Design, University of Canberra, 2021</p>
             </div>
         </footer>
-
     </body>
-
 </html>
