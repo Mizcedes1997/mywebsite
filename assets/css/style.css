@@ -21,10 +21,6 @@
     /* Custom properties were used to define the colours that were reused throughout the document. I only had to adjust the custom property, rather than having to search and replace each color individually throughout the document. The custom properties were defined in the :root psuedo class selector rather than the <html> element because its specificity is higher.*/
 }
 
-html{
-    font-size: 62.5%;
-}
-
 body{
     font-family: 'Lato', sans-serif; 
     font-size: 16px;
@@ -36,31 +32,31 @@ body{
 
 h1, h2, h3{
     font-family: 'Oswald', sans-serif; 
-    margin: 2rem 0 2rem 0; 
+    margin: 1.25rem 0 1.25rem 0; 
 }
 
 h1{    
-    font-size: 3.6rem; 
+    font-size: 2.25rem; 
     font-weight: 700;
-    letter-spacing: 0.2rem; 
+    letter-spacing: 0.125rem; 
     text-transform: uppercase;
     display: inline-block;
-    padding: 0.5rem 5rem; 
+    padding: 0.25rem 3.125rem; 
     color: var(--heading-color);  
 }
 
 h2{
-    font-size: 2.2rem; 
+    font-size: 1.375rem; 
     font-weight: 500;
     text-transform: none;
     text-align: center;
 }
 
 h3{
-    font-size: 2.2rem; 
+    font-size: 1.375rem; 
     font-weight: 400;
     text-transform: none;
-    margin: 0 11rem 2rem 11rem;
+    margin: 0 6.875rem 1.25rem 6.875rem;
 }
 
 /* Links */
@@ -85,26 +81,26 @@ header{
     position: sticky;
     top: 0;
     width: 100%;
-    box-shadow: 0.4rem 0 0.3rem 0.3rem;
+    box-shadow: 0.25rem 0 0.25rem 0.25rem;
     /* The position property is used to create a sticky header. The box-shadow property is used to cast a drop shadow on the <header> element, to create greater contrast between the sticky <header> element and the <main> element.*/
 } 
 
 nav{
     font-family: 'Oswald', sans-serif; 
-    font-size: 2.4rem; 
+    font-size: 1.5rem; 
     font-weight: 500;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.125rem;
     color: var(--heading-color);
     text-transform: capitalize;    
 }
 
     nav ul{
-        padding: 4rem 3rem 0 3rem;
+        padding: 2.5rem 1.875rem 0 1.875rem;
     }
 
     nav ul li{
         display: inline-block;
-        margin-right: 2rem;
+        margin-right: 1.25rem;
     }
 
     /* Current Page*/
@@ -117,54 +113,54 @@ nav{
 main{
     background-color: var(--main-bg-color);
     max-width: 960px;
-    margin: 5rem auto; 
-    padding: 2rem 2rem;
+    margin: 3.125rem auto; 
+    padding: 1.25rem 1.25rem;
     overflow: auto;
-    border-radius: 2.5rem;
+    border-radius: 1.5rem;
     /* The border-radius property is used to give the <main> element and <img> elements rounded borders.*/
 }
 
 p{
-    font-size: 1.8rem; 
-    margin: 0 11rem 2rem 11rem;
+    font-size: 1.125rem; 
+    margin: 0 6.5rem 1.25rem 6.5rem;
 }
 
     p ~ ul{
-        margin: 0 11rem 2rem 11rem
+        margin: 0 6.5rem 1.25rem 6.5rem;
+        font-size: 1.125rem;
         /* The selector, p ~ ul, is used because it selects every <ul> element that is preceded by a <p> element. Using this selector, rather than ul li, allows me to style the <ul> elements in <p> elements differently from the nav ul.*/
-    }
-
-    p ~ ul li{
-        font-size:1.8rem;
-        list-style-type:disc;
-        list-style-position: inside;
     }
 
 footer{
     font-family: 'Oswald', sans-serif; 
-    font-size: 1.8rem;
+    font-size: 1.125rem;
     text-align: center;
     background-color: var(--header-bg-color);
     color:var(--heading-color);
-    padding: 2rem 0px; 
+    padding: 1.25rem 0px; 
     }
 
     footer p{
-    margin-bottom: 0px;
-}
+    margin-bottom: 0rem;
+    }
 
  img{
     max-width: 100%;
-    border-radius: 2rem;
+    border-radius: 1.25rem;
     border: solid;
-    border-width:0.3rem;
+    border-width:0.25rem;
     border-color: var(--main-text-color);
  }
 
 /* 2 Classes and IDs ========================*/
 
+.dot-point{
+        list-style-type:disc;
+        list-style-position: inside;
+    }
+
 .full-width-wrapper{
-    width:100%;
+    max-width:100%;
 }
 
 .wrapper {
@@ -183,15 +179,15 @@ footer{
     }
 
 .flex-header{
-    display: flex;
-    flex-wrap: wrap;
+    display:flex;
+    flex-wrap:wrap;
     justify-content:space-between;
     }
 
 .right-img,
 .left-img{
     max-width:40%;
-    margin: 2rem;
+    margin:1.25rem;
 }
 
 .right-text,
@@ -203,9 +199,9 @@ footer{
 } 
 
 .centre{
-    margin: 3rem 12rem;
+    margin: 0 auto;
     width: 75%;
-    max-height: 45rem;
+    max-height: 28rem;
     overflow: hidden;
 }
 
@@ -214,9 +210,11 @@ footer{
     flex-wrap:wrap;
 }
 
-    .flex-gallery> li{
-        width: 25%;
+    .flex-gallery>li{
+        max-width: 30%;
         flex-grow: 1;
+        padding: 10px 10px;
+        margin: 0 auto;
     }
 
     .flex-gallery img{
@@ -236,12 +234,19 @@ footer{
   }
   
   /* Hide Hamburger */
-  #hamnav label, #hamburger { display: none; }
+  #hamnav label, 
+  #hamburger { 
+      display: none; 
+    }
   
   /* Horizontal Menu Items */
-  #hamitems { display: flex; }
+  #hamitems { 
+      display: flex; 
+      justify-content: flex-end;
+    }
+
   #hamitems a {
-    width: 20%; /* 100% / 5 tabs = 20% */
+    /* width: 20%;  */
     padding: 10px;
     color: var(--heading-color);
     text-decoration: none;
@@ -255,9 +260,9 @@ footer{
   @media screen and (max-width: 850px){
     /* Show Hamburger Icon */
     #hamnav label { 
-      display: inline-block; 
-      color: white;
-      background: #a02620;
+      background-color: var(--heading-color); 
+      color: var(--body-bg-color);
+      display: inline-block;
       font-style: normal;
       font-size: 1.2em;
       padding: 10px;
@@ -272,17 +277,14 @@ footer{
     }
   
     /* Toggle Show/Hide Menu */
-    #hamitems { display: none; }
-    #hamnav input:checked ~ #hamitems { display: block; }
-  }
-  
-  /* [DOES NOT MATTER] */
-  html, body {
-    padding: 0;
-    margin: 0;
-    font-family: arial, sans-serif;
-  }
+    #hamitems { 
+        display: none; 
+    }
 
+    #hamnav input:checked ~ #hamitems {
+         display: block; 
+        }
+   
 /* 4 Media Queries ==========================*/
 @media screen and (max-device-width: 900px) { 
     .grid-2-col{ 
@@ -311,6 +313,6 @@ footer{
     }
 }
 
-@media screen and (max-device-width: 200px){
+@media screen and (max-device-width: 250px){
 
 }
