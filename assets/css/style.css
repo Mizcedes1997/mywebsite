@@ -295,19 +295,26 @@ footer{
    
 /* 4 Media Queries ==========================*/
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width:1200px){
     body{
-    background-color:unset;
+    background-color: var(--main-bg-color);
     }
 }
 
-@media screen and (max-width: 960px){
+@media screen and (max-device-width:960px){
     .centre{
         max-height:unset;
     }
+
+    .flex-index > img{
+        margin: 1.5rem auto;
+        display: block;
+        width: 70%;
+        overflow: hidden;
+    }
 }
 
-@media screen and (max-width: 900px) { 
+@media screen and (max-width:900px){ 
     .flex-gallery > li{
         max-width:45%;
     }
@@ -317,14 +324,14 @@ footer{
 
     .flex-index{
         flex-direction: column;
+    } 
+
+    .flex-index:nth-child(5n){
+        order:6;
     }
 
-    .flex-index > img{
-        margin: 1.5rem auto;
-        display: block;
-        width: 80%;
-        max-height: 28rem;
-        overflow: hidden;
+    .flex-index:nth-child(6n){
+        order:5;
     }
 
     nav{
@@ -332,8 +339,8 @@ footer{
     }
     
     p, 
-    p ~ ul,{
-        padding:1rem 3rem;
+    p ~ ul{
+        padding:1rem 2rem;
     } 
 
     .right-img,
@@ -346,11 +353,10 @@ footer{
     .left-text{
     max-width: 100%;
     align-self:unset;
-    padding:1rem 3rem;
+    padding:1rem 2rem;
     } 
-}
 
-@media screen and (max-width: 768px) { 
+@media screen and (max-width: 768px){ 
     .flex-gallery > li{
         max-width:100%;
 
@@ -389,20 +395,21 @@ footer{
     p.left-text{
     font-size: 1rem;   
     }
-
-    /* CHANGE H2 AND H3 SIZE AS WELL*/
 }
 
-@media screen and (max-width: 600px) { 
+@media screen and (max-width: 600px){ 
 /* CHANGE H1 AND NAV SIZE */
 }
 
-@media screen and (max-width: 300px) { 
+@media screen and (max-width: 300px){ 
     .flex-gallery > li{
         max-width:100%;
     }
 }
 
 @media screen and (max-width: 250px){
-
+    h1{
+    margin:1rem;
+    padding:1rem;
+    }
 }
