@@ -46,7 +46,7 @@ h1{
 }
 
 h2{
-    font-size: 1.375rem; 
+    font-size: 1.5rem; 
     font-weight: 500;
     text-transform: none;
     text-align: center;
@@ -107,6 +107,7 @@ nav{
     nav ul li a.currentpage{
         background-color: var(--body-bg-color);
         text-decoration: none;
+        border-radius:3px;
         /*The link corresponding with the current page that the user is viewing will have a different background colour, compared to the <header> element. The use of a different background colour provides feedback to the user, highlighting the user's current position on my website*/
     }
 
@@ -115,7 +116,7 @@ main{
     max-width: 960px;
     margin: 3.125rem auto; 
     overflow: auto;
-    border-radius: 1.5rem;
+    border-radius: 6px;
     /* The border-radius property is used to give the <main> element and <img> elements rounded borders.*/
 }
 
@@ -145,7 +146,7 @@ footer{
 
  img{
     max-width: 100%;
-    border-radius: 1.25rem;
+    border-radius: 6px;
     border: solid;
     border-width:0.25rem;
     border-color: var(--main-text-color);
@@ -201,7 +202,7 @@ footer{
     margin: 1.5rem auto;
     display: block;
     width: 75%;
-    max-height: 28rem;
+    max-height: 30rem;
     overflow: hidden;
 }
 
@@ -243,6 +244,7 @@ footer{
   #hamnav label, 
   #hamburger { 
       display: none; 
+      margin: 1.25rem 2rem 1.25rem 2rem;
     }
   
   /* Horizontal Menu Items */
@@ -263,7 +265,7 @@ footer{
   }
   
   /* [ON SMALL SCREENS] */
-  @media screen and (max-width: 900px){
+  @media screen and (max-width: 960px){
     /* Show Hamburger Icon */
     #hamnav label { 
       background-color: var(--heading-color); 
@@ -293,19 +295,19 @@ footer{
    
 /* 4 Media Queries ==========================*/
 
-    @media screen and (max-device-width: 960px) {
-    .right-text,
-    .left-text{
-    font-size: 16px;
-    }
-
+@media screen and (max-width: 1200px){
     body{
-        background-color:var(--main-bg-color);
+    background-color:unset;
     }
 }
-    
 
-    @media screen and (max-device-width: 900px) { 
+@media screen and (max-width: 960px){
+    .centre{
+        max-height:unset;
+    }
+}
+
+@media screen and (max-width: 900px) { 
     .flex-gallery > li{
         max-width:45%;
     }
@@ -325,6 +327,15 @@ footer{
         overflow: hidden;
     }
 
+    nav{
+        font-size:1.375rem;
+    }
+    
+    p, 
+    p ~ ul,{
+        padding:1rem 3rem;
+    } 
+
     .right-img,
     .left-img{
     max-width: 100%;
@@ -335,10 +346,11 @@ footer{
     .left-text{
     max-width: 100%;
     align-self:unset;
+    padding:1rem 3rem;
     } 
 }
 
-@media screen and (max-device-width: 768px) { 
+@media screen and (max-width: 768px) { 
     .flex-gallery > li{
         max-width:100%;
 
@@ -357,24 +369,40 @@ footer{
 
     #gallery-img{
         display: none;
-    } 
+    }
 
+    h1{
+        font-size:2rem;
+    }
+    h2,
+    nav{
+        font-size:1.25rem;
+    }
+    
+    h3{
+        font-size:1.125rem;
+    }
+    
     p, 
-    p ~ ul,{
-        font-size: 1rem;
-    } 
+    p ~ ul,
+    p.right-text, 
+    p.left-text{
+    font-size: 1rem;   
+    }
+
+    /* CHANGE H2 AND H3 SIZE AS WELL*/
 }
 
-@media screen and (max-device-width: 600px) { 
-
+@media screen and (max-width: 600px) { 
+/* CHANGE H1 AND NAV SIZE */
 }
 
-@media screen and (max-device-width: 300px) { 
+@media screen and (max-width: 300px) { 
     .flex-gallery > li{
         max-width:100%;
     }
 }
 
-@media screen and (max-device-width: 250px){
+@media screen and (max-width: 250px){
 
 }
