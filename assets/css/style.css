@@ -14,7 +14,7 @@
 /* 1 Elements ========================*/
 :root{
     --header-bg-color:#8398af;
-    --body-bg-color:#c1cbd7; 
+    --body-bg-color: #e0e5eb; 
     --main-bg-color:#fafafa;
     --heading-color: #080f26; 
     --main-text-color:#696969;
@@ -59,23 +59,6 @@ h3{
     margin: 0 6.5rem 1.25rem 6.5rem;
 }
 
-/* Links */
-a{
-    color: inherit;
-    text-decoration: none;
-}
-
-    /* Mouse over link */
-    a:hover{
-        background-color: var(--body-bg-color);
-        /*When a user hovers over a link, the cursor will turn into a pointer and the background colour of the link will change, providing the user with visual feedback. The visual feedback indicates to the user that the link can be cllicked on.*/
-    }
-
-    /* Visited link */
-    a:visited{
-        text-decoration: none;
-    }
-
 header{
     background-color: var(--header-bg-color);
     position: sticky;
@@ -109,6 +92,25 @@ nav{
         text-decoration: none;
         border-radius:3px;
         /*The link corresponding with the current page that the user is viewing will have a different background colour, compared to the <header> element. The use of a different background colour provides feedback to the user, highlighting the user's current position on my website*/
+    }
+
+    
+/* Links */
+a{
+    color:inherit;
+    text-decoration: none;
+}
+
+    /* Mouse over link */
+    a:hover{
+        background-color: var(--body-bg-color);
+        border-radius: 3px;
+        /*When a user hovers over a link, the cursor will turn into a pointer and the background colour of the link will change, providing the user with visual feedback. The visual feedback indicates to the user that the link can be cllicked on.*/
+    }
+
+    /* Visited link */
+    a:visited{
+        text-decoration:none;
     }
 
 main{
@@ -199,7 +201,10 @@ footer{
 } 
 
 .centre{
-    margin: 1.5rem auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
     display: block;
     width: 75%;
     max-height: 30rem;
@@ -229,6 +234,9 @@ footer{
         object-fit: cover;
     }
 
+   #index-image-redisplay{
+       display: none;
+   }
     
 
 /* 3 Hamburger Icon ==========================*/
@@ -254,7 +262,7 @@ footer{
     }
 
   #hamitems a {
-    /* width: 20%;  */
+    width: 20%; 
     padding: 10px;
     color: var(--heading-color);
     text-decoration: none;
@@ -292,7 +300,10 @@ footer{
     #hamnav input:checked ~ #hamitems {
          display: block; 
         }
-   
+    }
+    nav ul li{
+        display: unset;
+    }
 /* 4 Media Queries ==========================*/
 
 @media screen and (max-width:1200px){
@@ -301,7 +312,7 @@ footer{
     }
 }
 
-@media screen and (max-device-width:960px){
+@media screen and (max-width:960px){
     .centre{
         max-height:unset;
     }
@@ -325,22 +336,40 @@ footer{
     .flex-index{
         flex-direction: column;
     } 
-
-    .flex-index:nth-child(5n){
-        order:6;
+    
+    #hamitems a{
+        padding:unset;
     }
 
-    .flex-index:nth-child(6n){
-        order:5;
+    #index-image{
+          display:none;
     }
+
+    #index-image-redisplay{
+        display:unset;
+  }
 
     nav{
         font-size:1.375rem;
     }
+
+        nav ul{
+            padding: 0 1rem 0 1rem;
+        } 
+
+    h2{
+        padding:unset;
+    }
     
+    h3{
+        padding: 0 2rem;
+        margin: 0 1rem;
+    }
+
     p, 
     p ~ ul{
-        padding:1rem 2rem;
+        padding: 1rem 2rem;
+        margin: 0 1rem;
     } 
 
     .right-img,
@@ -353,7 +382,8 @@ footer{
     .left-text{
     max-width: 100%;
     align-self:unset;
-    padding:1rem 2rem;
+    padding: 1rem 2rem;
+    margin: 0 1rem;
     } 
 
 @media screen and (max-width: 768px){ 
@@ -378,38 +408,102 @@ footer{
     }
 
     h1{
-        font-size:2rem;
+        font-size:1.875rem;
     }
-    h2,
+
+    h2{
+        font-size:1.25rem;
+        margin:;
+    }
+   
+    h3{
+        font-size:1.125rem;
+        padding: 0 1.5rem;
+        margin: 0 1rem;
+    }
+    
     nav{
         font-size:1.25rem;
     }
-    
-    h3{
-        font-size:1.125rem;
-    }
-    
+
     p, 
     p ~ ul,
     p.right-text, 
     p.left-text{
-    font-size: 1rem;   
-    }
+        font-size: 1rem;
+        padding:1rem 1.5rem;
+        margin: 0 1rem;
+    }      
 }
 
 @media screen and (max-width: 600px){ 
-/* CHANGE H1 AND NAV SIZE */
+.full-width-wrapper>p{
+    font-size: 0.875rem;
+    padding:unset;
+    }
+h1{
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin: 1rem 0 0.85rem 0.5rem;
 }
+   
+h2{
+    font-size: 1rem;
+    padding: unset;
+    margin:1rem 0 0.5rem 0;
+} 
+
+h3{
+    font-size:0.875rem;
+    padding: 0.5rem 0 0 0;
+    margin:unset;
+}
+
+nav{
+    font-size: 1rem;
+}
+
+#hamnav label{
+    margin:1rem 1rem 1rem 0;
+}
+
+p, 
+p ~ ul,
+p.right-text, 
+p.left-text{
+    font-size:0.875rem;
+    padding: 1rem 0;
+    margin:unset;
+}   
+
+.wrapper{
+    padding: 1rem;
+}
+
 
 @media screen and (max-width: 300px){ 
     .flex-gallery > li{
         max-width:100%;
     }
+
+    h1{
+        font-size: 1.125rem;
+        padding: 0.5rem 0 0 0;
+        margin: 1rem 0 0rem 0.5rem;
+    }
+
+    #hamnav label{
+        margin: 1rem 0.5rem 1rem 0;
+    }
+
+    img,
+    .centre{
+        margin: 0 auto;
+    }    
 }
 
 @media screen and (max-width: 250px){
-    h1{
-    margin:1rem;
-    padding:1rem;
+    .wrapper{
+        padding: 0.5rem;
     }
 }
