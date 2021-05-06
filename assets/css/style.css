@@ -156,6 +156,9 @@ footer{
  }
 
 /* 2 Classes and IDs ========================*/
+#architect-img-redisplay{
+    display: none;
+}
 
 .dot-point{
         list-style-type: disc;
@@ -388,6 +391,11 @@ footer{
 } 
 
 @media screen and (max-width: 768px){ 
+    #architect-img-redisplay{
+        display: unset;
+        margin: 0 auto;
+    }
+    
     .flex-gallery>li{
         max-width: 100%;}
         
