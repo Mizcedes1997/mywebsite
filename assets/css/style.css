@@ -14,9 +14,9 @@
 /* 1 Elements ========================*/
 :root{
     --header-bg-color:#8398af;
-    --body-bg-color: #e0e5eb; 
+    --body-bg-color:#e0e5eb; 
     --main-bg-color:#fafafa;
-    --heading-color: #080f26; 
+    --heading-color:#080f26; 
     --main-text-color:#696969;
     /* Custom properties were used to define the colours that were reused throughout the document. I only had to adjust the custom property, rather than having to search and replace each color individually throughout the document. The custom properties were defined in the :root psuedo class selector rather than the <html> element because its specificity is higher.*/
 }
@@ -90,14 +90,14 @@ nav{
     nav ul li a.currentpage{
         background-color: var(--body-bg-color);
         text-decoration: none;
-        border-radius:3px;
+        border-radius: 3px;
         /*The link corresponding with the current page that the user is viewing will have a different background colour, compared to the <header> element. The use of a different background colour provides feedback to the user, highlighting the user's current position on my website*/
     }
 
     
 /* Links */
 a{
-    color:inherit;
+    color: inherit;
     text-decoration: none;
 }
 
@@ -105,12 +105,13 @@ a{
     a:hover{
         background-color: var(--body-bg-color);
         border-radius: 3px;
+        cursor: pointer;
         /*When a user hovers over a link, the cursor will turn into a pointer and the background colour of the link will change, providing the user with visual feedback. The visual feedback indicates to the user that the link can be cllicked on.*/
     }
 
     /* Visited link */
     a:visited{
-        text-decoration:none;
+        text-decoration: none;
     }
 
 main{
@@ -138,7 +139,7 @@ footer{
     font-size: 1.125rem;
     text-align: center;
     background-color: var(--header-bg-color);
-    color:var(--heading-color);
+    color: var(--heading-color);
     padding: 1.25rem; 
     }
 
@@ -150,19 +151,19 @@ footer{
     max-width: 100%;
     border-radius: 6px;
     border: solid;
-    border-width:0.25rem;
+    border-width: 0.25rem;
     border-color: var(--main-text-color);
  }
 
 /* 2 Classes and IDs ========================*/
 
 .dot-point{
-        list-style-type:disc;
+        list-style-type: disc;
         list-style-position: inside;
     }
 
 .full-width-wrapper{
-    max-width:100%;
+    max-width: 100%;
 }
 
 .wrapper {
@@ -173,7 +174,7 @@ footer{
 .flex-index{
     display: flex;
     flex-wrap: wrap;
-    justify-content:center;
+    justify-content: center;
 }
 
     .flex-index h2{
@@ -196,7 +197,7 @@ footer{
 .left-text
 {
     max-width: 50%;
-    align-self:center;
+    align-self: center;
     margin: 0 0;
 } 
 
@@ -223,7 +224,7 @@ footer{
         margin: 0 auto;
     }
 
-    .flex-gallery > li:nth-child(4){
+    .flex-gallery>li:nth-child(4){
         display: none;
     }
     
@@ -238,7 +239,6 @@ footer{
        display: none;
    }
     
-
 /* 3 Hamburger Icon ==========================*/
     /* Hamburger Menu - https://code-boxx.com/simple-responsive-pure-css-hamburger-menu/ */
 
@@ -314,10 +314,10 @@ footer{
 
 @media screen and (max-width:960px){
     .centre{
-        max-height:unset;
+        max-height: unset;
     }
 
-    .flex-index > img{
+    .flex-index>img{
         margin: 1.5rem auto;
         display: block;
         width: 70%;
@@ -326,11 +326,11 @@ footer{
 }
 
 @media screen and (max-width:900px){ 
-    .flex-gallery > li{
-        max-width:45%;
+    .flex-gallery>li{
+        max-width: 45%;
     }
-    .flex-gallery > li:nth-child(2n){
-        display:none;
+    .flex-gallery>li:nth-child(2n){
+        display: none;
     }
 
     .flex-index{
@@ -338,19 +338,19 @@ footer{
     } 
     
     #hamitems a{
-        padding:unset;
+        padding: unset;
     }
 
     #index-image{
-          display:none;
+          display: none;
     }
 
     #index-image-redisplay{
-        display:unset;
-  }
+        display: unset;
+    }
 
     nav{
-        font-size:1.375rem;
+        font-size: 1.375rem;
     }
 
         nav ul{
@@ -358,7 +358,7 @@ footer{
         } 
 
     h2{
-        padding:unset;
+        padding: unset;
     }
     
     h3{
@@ -381,22 +381,23 @@ footer{
     .right-text,
     .left-text{
     max-width: 100%;
-    align-self:unset;
+    align-self: unset;
     padding: 1rem 2rem;
     margin: 0 1rem;
-    } 
+    }
+} 
 
 @media screen and (max-width: 768px){ 
-    .flex-gallery > li{
-        max-width:100%;
+    .flex-gallery>li{
+        max-width: 100%;}
+        
+        .flex-gallery>li:nth-child(3n){
+            display: none;
+        }
 
-    }.flex-gallery > li:nth-child(3n){
-        display:none;
-    }
-
-    .flex-gallery > li:nth-child(4n){
-        display: unset;
-    }
+        .flex-gallery>li:nth-child(4n){
+            display: unset;
+        }
 
     .full-width-wrapper>p{
     font-size: 1rem;
@@ -408,22 +409,22 @@ footer{
     }
 
     h1{
-        font-size:1.875rem;
+        font-size: 1.875rem;
     }
 
     h2{
-        font-size:1.25rem;
-        margin:;
+        font-size: 1.25rem;
+        margin: 1rem 0;
     }
    
     h3{
-        font-size:1.125rem;
+        font-size: 1.125rem;
         padding: 0 1.5rem;
         margin: 0 1rem;
     }
     
     nav{
-        font-size:1.25rem;
+        font-size: 1.25rem;
     }
 
     p, 
@@ -431,79 +432,102 @@ footer{
     p.right-text, 
     p.left-text{
         font-size: 1rem;
-        padding:1rem 1.5rem;
+        padding: 1rem 1.5rem;
         margin: 0 1rem;
     }      
 }
 
 @media screen and (max-width: 600px){ 
-.full-width-wrapper>p{
-    font-size: 0.875rem;
-    padding:unset;
+    .full-width-wrapper>p{
+        font-size: 0.875rem;
+        padding: unset;
+        }
+
+    h1{
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        margin: 1rem 0 0.85rem 0.5rem;
     }
-h1{
-    font-size: 1.5rem;
-    padding: 0.5rem;
-    margin: 1rem 0 0.85rem 0.5rem;
-}
-   
-h2{
-    font-size: 1rem;
-    padding: unset;
-    margin:1rem 0 0.5rem 0;
-} 
+    
+    h2{
+        font-size: 1rem;
+        padding: unset;
+        margin: 1rem 0 0.5rem 0;
+    } 
 
-h3{
-    font-size:0.875rem;
-    padding: 0.5rem 0 0 0;
-    margin:unset;
-}
+    h3{
+        font-size: 0.875rem;
+        padding: 0.5rem 0 0 0;
+        margin: unset;
+    }
 
-nav{
-    font-size: 1rem;
-}
+    nav{
+        font-size: 1rem;
+    }
 
-#hamnav label{
-    margin:1rem 1rem 1rem 0;
-}
+    #hamnav label{
+        margin: 1rem 1rem 1rem 0;
+    }
 
-p, 
-p ~ ul,
-p.right-text, 
-p.left-text{
-    font-size:0.875rem;
-    padding: 1rem 0;
-    margin:unset;
-}   
+    p, 
+    p ~ ul,
+    p.right-text, 
+    p.left-text{
+        font-size: 0.875rem;
+        padding: 1rem 0;
+        margin:unset;
+    }   
 
-.wrapper{
-    padding: 1rem;
+    .wrapper{
+        padding: 1rem;
+    }
 }
 
 
 @media screen and (max-width: 300px){ 
-    .flex-gallery > li{
-        max-width:100%;
+    .flex-gallery>li{
+        max-width: 100%;
+    }
+
+    .flex-index>img,
+    img, 
+    .centre{
+        margin: 0.5rem auto;
     }
 
     h1{
         font-size: 1.125rem;
         padding: 0.5rem 0 0 0;
-        margin: 1rem 0 0rem 0.5rem;
+        margin: 1rem 0 0 0.5rem;
+    }
+
+    h2, 
+    h3{
+        margin-bottom: 0;
+    }
+
+    nav{
+        font-size: 0.875rem;
     }
 
     #hamnav label{
         margin: 1rem 0.5rem 1rem 0;
     }
 
-    img,
-    .centre{
-        margin: 0 auto;
-    }    
+    p, 
+    p ~ ul,
+    p.right-text, 
+    p.left-text{
+        padding: 0.5rem 0;
+    }  
+
+    .wrapper{
+        padding: 0 1rem;
+    }
 }
 
 @media screen and (max-width: 250px){
     .wrapper{
-        padding: 0.5rem;
+        padding: 0 0.5rem;
     }
 }
