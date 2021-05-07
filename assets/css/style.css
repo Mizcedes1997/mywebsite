@@ -303,10 +303,11 @@ footer{
     #hamnav input:checked ~ #hamitems {
          display: block; 
         }
-    }
+   
     nav ul li{
         display: unset;
     }
+  }
 /* 4 Media Queries ==========================*/
 
 @media screen and (max-width:1200px){
